@@ -1,0 +1,148 @@
+﻿<Window x:Class="Source.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Source"
+        mc:Ignorable="d"
+        Title="Calculator" Height=" 800" Width="550">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="15" BorderBrush="White">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/icons8-menu-100.png"/>
+                </Button.Background>
+            </Button>
+            <Label Grid.Column="1"
+                   FontSize="30"
+                   VerticalAlignment="Center"
+                   FontWeight="DemiBold">Standart</Label>
+            <Button Margin="15" BorderBrush="White" Grid.Column="2">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-history-96.png" Stretch="Uniform"/>
+                </Button.Background>
+
+            </Button>
+        </Grid>
+        <DockPanel Margin="0,87,0,0" Grid.RowSpan="2">
+            <TextBox
+                Name="txt_calc"
+                Margin="20"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Right"
+                    FontSize="40"
+                    FontWeight="DemiBold">
+                
+
+            </TextBox>
+        </DockPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="3" FontSize="30" Foreground="Gray"  BorderBrush="White" Background="#FFDDDDDD" Content="MC" IsEnabled="False"/>
+            <Button Margin="3" Grid.Column="1"  FontSize="30" Foreground="Gray"  BorderBrush="White" Background="#FFDDDDDD" Content="MR" IsEnabled="False"/>
+            <Button Margin="3" Grid.Column="2"  FontSize="30" Foreground="Gray"  BorderBrush="White" Background="#FFDDDDDD" Content="M+" IsEnabled="False"/>
+            <Button Margin="3" Grid.Column="3"  FontSize="30" Foreground="Gray"  BorderBrush="White" Background="#FFDDDDDD" Content="M-" IsEnabled="False"/>
+            <Button Margin="3" Grid.Column="4"  FontSize="30" Foreground="Gray"  BorderBrush="White" Background="#FFDDDDDD" Content="MS" IsEnabled="False"/>
+            <Button Margin="3" Grid.Column="5"  FontSize="30" Foreground="Gray"  BorderBrush="White" Background="#FFDDDDDD" Content="M^" IsEnabled="False"></Button>
+        </Grid>
+        <Grid Grid.Row="3" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="2" FontSize="40" FontWeight="DemiBold" Background="#FFDDDDDD" Content="%" Click="Button_Click_5" Tag="%"/>
+            <Button Margin="2"  FontSize="40" Grid.Column="1" FontWeight="DemiBold" Background="#FFDDDDDD" Content="√" Click="Button_Click_5" Tag="sqrt"/>
+            <Button Margin="2"  FontSize="40" FontWeight="DemiBold" Grid.Column="2" Content="x²" Click="Button_Click_5" Tag="pow"/>
+            <Button Margin="2" Grid.Column="3" FontSize="40" Click="Button_Click_5" Tag="1/x">1/x</Button>
+            <Button Margin="2" Grid.Row="1" FontSize="40" FontWeight="DemiBold" Content="CE" Click="Button_Click_4" />
+            <Button Margin="2" Grid.Row="1"  Grid.Column="1" FontSize="40" FontWeight="DemiBold" Content="C" Click="Button_Click_4"/>
+            <Button Margin="2" Grid.Row="1"  Grid.Column="2"  FontSize="40" FontWeight="DemiBold" Content="⌫" Click="Button_Click_3"/>
+            <Button Margin="2" Grid.Row="1"  Grid.Column="3"  FontSize="50" FontWeight="DemiBold"  Content="÷" Click="Button_Click" Tag="/"/>
+            <Button Margin="2" Grid.Row="2" Click="Button_Click" Tag="7" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-7-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="2"  Grid.Column="1" Click="Button_Click" Tag="8">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-8-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="2"  Grid.Column="2" Tag="9" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-9-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="2"  Grid.Column="3"   FontSize="50" FontWeight="DemiBold" Content="x" Tag="*" Click="Button_Click"/>
+            <Button Margin="2" Grid.Row="3" Tag="4" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-4-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="3"  Grid.Column="1" Tag="5" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-5-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="3"  Grid.Column="2" Tag="6" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-6-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="3"  Grid.Column="3"  FontSize="50" FontWeight="DemiBold" Content="-" Tag="-" Click="Button_Click"/>
+            <Button Margin="2" Grid.Row="4" Tag="1" Click="Button_Click" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-1st-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="4"  Grid.Column="1" Tag="2" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-2-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="4"  Grid.Column="2" Tag="3" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-3-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="4"  Grid.Column="3"  FontSize="50" FontWeight="DemiBold" Content="+" Tag="+" Click="Button_Click"/>
+            <Button Margin="2" Grid.Row="5" BorderBrush="White" FontSize="50" FontWeight="DemiBold" Content="±" Click="Button_Click_2"/> 
+            <Button Margin="2" Grid.Row="5" Grid.Column="1" Tag="0" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-circled-0-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="2" Grid.Row="5" Grid.Column="2"  FontSize="50" FontWeight="DemiBold" Content="," Click="Button_Click" Tag="."/>
+            <Button Margin="2" Grid.Row="5" Grid.Column="3"   FontSize="50" FontWeight="DemiBold" Content="=" Click="Button_Click_1"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons8-1st-96.png" />
+    <None Remove="icons8-c-96.png" />
+    <None Remove="icons8-calculator-67 %281%29.png" />
+    <None Remove="icons8-calculator-67 %282%29.png" />
+    <None Remove="icons8-calculator-67 %283%29.png" />
+    <None Remove="icons8-calculator-67 %284%29.png" />
+    <None Remove="icons8-calculator-67 %285%29.png" />
+    <None Remove="icons8-calculator-67 %286%29.png" />
+    <None Remove="icons8-calculator-67.png" />
+    <None Remove="icons8-circled-0-96.png" />
+    <None Remove="icons8-circled-2-96.png" />
+    <None Remove="icons8-circled-3-96.png" />
+    <None Remove="icons8-circled-4-96.png" />
+    <None Remove="icons8-circled-5-96.png" />
+    <None Remove="icons8-circled-6-96.png" />
+    <None Remove="icons8-circled-7-96.png" />
+    <None Remove="icons8-circled-8-96.png" />
+    <None Remove="icons8-circled-9-96.png" />
+    <None Remove="icons8-clear-symbol-100.png" />
+    <None Remove="icons8-comma-90.png" />
+    <None Remove="icons8-divide-96.png" />
+    <None Remove="icons8-equal-sign-96.png" />
+    <None Remove="icons8-history-96.png" />
+    <None Remove="icons8-menu-100.png" />
+    <None Remove="icons8-minus-96.png" />
+    <None Remove="icons8-multiply-90.png" />
+    <None Remove="icons8-percentage-90.png" />
+    <None Remove="icons8-plus-math-90.png" />
+    <None Remove="icons8-square-root-100.png" />
+    <None Remove="icons8-upvote-downvote-96.png" />
+    <None Remove="icons8-x2-100.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons8-1st-96.png" />
+    <Resource Include="icons8-c-96.png" />
+    <Resource Include="icons8-calculator-67 (1).png" />
+    <Resource Include="icons8-calculator-67 (2).png" />
+    <Resource Include="icons8-calculator-67 (3).png" />
+    <Resource Include="icons8-calculator-67 (4).png" />
+    <Resource Include="icons8-calculator-67 (5).png" />
+    <Resource Include="icons8-calculator-67 (6).png" />
+    <Resource Include="icons8-calculator-67.png" />
+    <Resource Include="icons8-circled-0-96.png" />
+    <Resource Include="icons8-circled-2-96.png" />
+    <Resource Include="icons8-circled-3-96.png" />
+    <Resource Include="icons8-circled-4-96.png" />
+    <Resource Include="icons8-circled-5-96.png" />
+    <Resource Include="icons8-circled-6-96.png" />
+    <Resource Include="icons8-circled-7-96.png" />
+    <Resource Include="icons8-circled-8-96.png" />
+    <Resource Include="icons8-circled-9-96.png" />
+    <Resource Include="icons8-clear-symbol-100.png" />
+    <Resource Include="icons8-comma-90.png" />
+    <Resource Include="icons8-divide-96.png" />
+    <Resource Include="icons8-equal-sign-96.png" />
+    <Resource Include="icons8-history-96.png" />
+    <Resource Include="icons8-menu-100.png" />
+    <Resource Include="icons8-minus-96.png" />
+    <Resource Include="icons8-multiply-90.png" />
+    <Resource Include="icons8-percentage-90.png" />
+    <Resource Include="icons8-plus-math-90.png" />
+    <Resource Include="icons8-square-root-100.png" />
+    <Resource Include="icons8-upvote-downvote-96.png" />
+    <Resource Include="icons8-x2-100.png" />
+  </ItemGroup>
+
+</Project>
