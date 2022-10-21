@@ -28,27 +28,18 @@ namespace Source
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (txt_calc.Text.Length > 1)
+            {
+                if ((txt_calc.Text.ToString()[txt_calc.Text.Length - 1] == '*' || txt_calc.Text.ToString()[txt_calc.Text.Length - 1] == '+' || txt_calc.Text.ToString()[txt_calc.Text.Length - 1] == '/' || txt_calc.Text.ToString()[txt_calc.Text.Length - 1] == '-') && ((sender as Button)?.Tag.ToString() == "*" || ((sender as Button)?.Tag.ToString() == "+" || (sender as Button)?.Tag.ToString() == "/" || (sender as Button)?.Tag.ToString() == "-")))
+                                    {
+
+                    return;
+                }
+            }
+                
+            if (txt_calc.Text.Contains('.') && (sender as Button)?.Tag.ToString() == ".")
+                return;
             
-            if(txt_calc.Text.Contains('.') && (sender as Button)?.Tag.ToString() == ".")
-            {
-                return;
-            }
-            if (txt_calc.Text.Contains('*') && (sender as Button)?.Tag.ToString() == "*")
-            {
-                return;
-            }
-            if (txt_calc.Text.Contains('+') && (sender as Button)?.Tag.ToString() == "+")
-            {
-                return;
-            }
-            if (txt_calc.Text.Contains('/') && (sender as Button)?.Tag.ToString() == "/")
-            {
-                return;
-            }
-            if (txt_calc.Text.Contains('-') && (sender as Button)?.Tag.ToString() == "-")
-            {
-                return;
-            }
             else
             {
                 if (!((sender as Button)?.Tag.ToString() == "." && txt_calc.Text.Length == 0))
@@ -63,7 +54,7 @@ namespace Source
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string formattedCalculation = txt_calc.Text.Replace(",", ".").ToString().Replace("÷", "/");
+            string formattedCalculation = txt_calc.Text;
 
             try
             {
